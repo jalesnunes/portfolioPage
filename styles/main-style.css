@@ -18,3 +18,97 @@ main {
 .projects p {
   cursor: pointer;
 }
+
+.cards {
+  display: flex;
+
+  gap: 3rem;
+}
+
+.cards-projects{
+  background-color: var(--bg-cards);
+  width: 46.1rem;
+  height: 18.6rem;
+  
+  padding: 3rem;
+  margin-top: 3rem;
+
+  border-radius: 3rem;
+}
+
+
+
+.card-header {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+
+  margin-bottom: 2rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 2.5rem;
+}
+
+.footer-tech{
+  display: flex;
+  align-items: center;
+}
+
+.git-likes {
+  display: flex;
+
+  align-items: center;
+  gap: 1rem;
+}
+
+.dot-point {
+  background-color: var(--tech-dot);
+  width: 1.5rem;
+  height: 1.5rem;
+
+  border: 1px var(--text-color) solid;
+  border-radius: 9999px;
+  margin-right: 1rem;
+}
+
+.h2-post {
+  background-color: var(--bg-cards);
+  width: 95.2rem;
+  height: 8.6rem;
+  border-radius: 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 3rem;
+
+  margin-top: 3rem;
+}
+
+.post-card {
+  background-color: var(--bg-cards);
+  width: 95.2rem;
+  height: 20.1rem;
+
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  gap: 2rem;
+
+  border-radius: 3rem;
+
+  padding: 3rem;
+  margin-top: 3rem;
+}
+
+.post-image img {
+  max-width: 12rem;
+  border-radius: 9999px;
+  border: 2px var(--border-line) solid;
+}

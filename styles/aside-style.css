@@ -7,11 +7,12 @@
 }
 
 :root {
-  --body-bg-color: #22212c;
-  --text-color: #837e9f;
+  --body-bg-color: hsl(245, 14%, 15%);
+  --text-color: #837ea0;
   --bg-cards: #302f3d;
   --bg-techs: #cb92b1;
   --border-line: #00ff00;
+  --tech-dot: #E7DE79;
 }
 
 html {
@@ -34,6 +35,10 @@ a {
 .container {
   display: flex;
   margin: 3rem;
+}
+
+.icon-color {
+  filter: invert(53%) sepia(7%) saturate(1217%) hue-rotate(209deg) brightness(94%) contrast(89%);
 }
 
 aside {
