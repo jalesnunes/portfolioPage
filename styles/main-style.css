@@ -1,0 +1,20 @@
+main {
+  flex: 5;
+}
+
+.projects {
+  background-color: var(--bg-cards);
+  width: 95.2rem;
+  height: 8.6rem;
+  border-radius: 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 3rem;
+}
+
+.projects p {
+  cursor: pointer;
+}
