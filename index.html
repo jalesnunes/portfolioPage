@@ -22,13 +22,17 @@
     <link rel="stylesheet" href="./styles/aside-style.css" />
     <link rel="stylesheet" href="./styles/main-style.css" />
   </head>
-  <body>
+  <body onload="handleIPAGithubRequest()">
     <div class="container">
       <aside>
         <div class="about-me">
-          <img src="https://picsum.photos/200" alt="my profile picture" />
-          <h1>Jales Jose Nunes</h1>
-          <p>Bio</p>
+          <img
+            class="profile-photo"
+            src="https://picsum.photos/200"
+            alt="my profile picture"
+          />
+          <h1 id="name">Jales Jose Nunes</h1>
+          <p id="bio">Bio</p>
         </div>
 
         <div class="my-contacts">
@@ -39,7 +43,7 @@
                 src="./assets/images/map-pin.svg"
                 alt=""
               />
-              <span>Brasil</span>
+              <span id="location">Brasil</span>
             </li>
 
             <li>
@@ -48,19 +52,19 @@
                 src="./assets/images/briefcase.svg"
                 alt=""
               />
-              <span>Imaginary</span>
+              <span id="organization">Imaginary</span>
             </li>
 
             <li>
-              <img class="icon-color" src="./assets/images/github.svg" alt="" />
-              <a href="#">jalesnunes</a>
+              <img  class="icon-color" src="./assets/images/github.svg" alt="" />
+              <a id="github" href="#"></a>
             </li>
 
             <li>
               <img
                 class="icon-color"
                 src="./assets/images/linkedin.svg"
-                alt=""
+                alt="link to linkedin"
               />
               <a href="#">jalesnunes-vem comigo</a>
             </li>
@@ -69,9 +73,9 @@
               <img
                 class="icon-color"
                 src="./assets/images/twitter.svg"
-                alt=""
+                alt="link to twiter"
               />
-              <a href="#">jalesnunes</a>
+              <a id="twitter" href="#" target="_blank"></a>
             </li>
 
             <li>
@@ -122,10 +126,10 @@
                 src="./assets/images/folder.svg"
                 alt="folder icon"
               />
-              <h3>project-example</h3>
+              <h3 id="project-name">project-example</h3>
             </div>
 
-            <p>
+            <p id="project-description">
               Consulte os codigos de erreo que aprecetem no painel do seu carro
               besta louca
             </p>
@@ -134,19 +138,19 @@
                 <img
                   class="icon-color"
                   src="./assets/images/star.svg"
-                  alt="star logo"
+                  alt="star icon"
                 />
-                <span>100</span>
+                <span id="stargazers-count">100</span>
                 <img
                   class="icon-color"
                   src="./assets/images/git-branch.svg"
-                  alt=""
+                  alt="git branch icon"
                 />
-                <span>100</span>
+                <span id="forks-count">100</span>
               </div>
               <div class="footer-tech">
                 <div class="dot-point"></div>
-                <span>Javascript</span>
+                <span id="project-language">Javascript</span>
               </div>
             </footer>
           </div>
@@ -191,7 +195,7 @@
 
         <div class="post-card">
           <div class="post-image">
-            <img src="https://picsum.photos/200" alt="my profile picture" />
+            <img class="profile-photo" src="" alt="my profile picture" />
           </div>
 
           <div class="post-content">
@@ -209,5 +213,7 @@
         </div>
       </main>
     </div>
+
+    <script src="/scripts/main.js"></script>
   </body>
 </html>
