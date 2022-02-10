@@ -1,11 +1,84 @@
-function handleHTMLElementsChangeProjects(data) {
-  console.log(data)
+let repoData = []
 
-  document.getElementById('project-name').innerHTML = data[0].name
-  document.getElementById('project-description').innerHTML = data[0].description
-  document.getElementById('project-language').innerHTML = data[0].language
-  document.getElementById('stargazers-count').innerHTML = data[0].stargazers_count
-  document.getElementById('forks-count').innerHTML = data[0].forks_count
+
+function handleHTMLElementsChangeProjects(repoDataSize) {
+  let cardCotent = ''
+  
+  if (repoDataSize === undefined) {
+    for (let i = 0; i < 6; i++) {
+      cardCotent += `
+      <div onclick="location.href='/pages/repo.html';" class="cards-projects">
+        <div class="card-header">
+          <img
+            class="icon-color"
+            src="../assets/images/folder.svg"
+            alt="folder icon"
+          />
+          <h3 id="project-name">${repoData[i].name}</h3>
+        </div>
+  
+        <p id="project-description">${repoData[i].description}</p>
+        <footer>
+          <div class="git-likes">
+            <img
+              class="icon-color"
+              src="../assets/images/star.svg"
+              alt="star icon"
+            />
+            <span id="stargazers-count">${repoData[i].stargazers_count}</span>
+            <img
+              class="icon-color"
+              src="../assets/images/git-branch.svg"
+              alt="git branch icon"
+            />
+            <span id="forks-count">${repoData[i].forks_count}</span>
+          </div>
+          <div class="footer-tech">
+            <div class="dot-point"></div>
+            <span id="project-language">${repoData[i].language}</span>
+          </div>
+        </footer>
+      </div>`
+    }
+  } else {
+    for (let i = 0; i < repoDataSize; i++) {
+      cardCotent += `
+      <div onclick="location.href='/pages/repo.html';" class="cards-projects">
+        <div class="card-header">
+          <img
+            class="icon-color"
+            src="../assets/images/folder.svg"
+            alt="folder icon"
+          />
+          <h3 id="project-name">${repoData[i].name}</h3>
+        </div>
+  
+        <p id="project-description">${repoData[i].description}</p>
+        <footer>
+          <div class="git-likes">
+            <img
+              class="icon-color"
+              src="../assets/images/star.svg"
+              alt="star icon"
+            />
+            <span id="stargazers-count">${repoData[i].stargazers_count}</span>
+            <img
+              class="icon-color"
+              src="../assets/images/git-branch.svg"
+              alt="git branch icon"
+            />
+            <span id="forks-count">${repoData[i].forks_count}</span>
+          </div>
+          <div class="footer-tech">
+            <div class="dot-point"></div>
+            <span id="project-language">${repoData[i].language}</span>
+          </div>
+        </footer>
+      </div>`
+    }
+  }
+
+  document.getElementById('cards').innerHTML = cardCotent
 }
 
 function projectInfo() {
@@ -20,7 +93,8 @@ function projectInfo() {
       }
     })
     .then(data => {
-      handleHTMLElementsChangeProjects(data)
+      repoData = data
+      handleHTMLElementsChangeProjects()
     })
 }
 
@@ -58,4 +132,12 @@ function handleIPAGithubRequest() {
       handleHTMLElementsChange(data)
       projectInfo()
     })
+}
+
+function loadMoreProfects() {
+  handleHTMLElementsChangeProjects(repoData.length)
+}
+
+function openRepo() {
+  console.log('in')
 }
